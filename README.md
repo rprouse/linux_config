@@ -4,8 +4,10 @@
 2. Run the following commands
 
 ```sh
+sudo do-release-upgrade
 sudo apt-get install zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+sudo apt-get install mc
 ```
 
 3. Insert the following at the beginning of `.bashrc`
