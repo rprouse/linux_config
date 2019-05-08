@@ -1,0 +1,57 @@
+[user]
+    email = rob@prouse.org
+    name = Rob Prouse
+[core]
+    autocrlf = input
+    safecrlf = true
+    excludesfile = 
+[alias]
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    unstage = reset -q HEAD --
+    staged = diff --cached
+    unstaged = diff
+    amend = commit --amend
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
+    current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+    # Usage: git track origin/feature-123-login-form
+    track = checkout -t
+    ac = !git add -A && git commit
+    co = checkout
+    ci = commit
+    st = status -sb
+    br = branch
+    tags = tag -l
+    branches = branch -a -vv
+    remotes = remote -v
+    type = cat-file -t
+    dump = cat-file -p
+    #hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hist = log --graph --pretty=format':%C(yellow)%h%Cred%d%Creset %s %C(white) %an, %ar%Creset'
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[apply]
+  whitespace = warn
+[help]
+    autocorrect = 1
+[status]
+    submodule = 1
+[push]
+    default = simple
