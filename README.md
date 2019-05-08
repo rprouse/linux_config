@@ -19,3 +19,4 @@ if [ -t 1 ]; then
     exec zsh
 fi
 ```
+4. For WSL, set the console color theme by opening a CMD window and running `colortool -b solarized_dark.itermcolors`
